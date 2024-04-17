@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    Enter How Many Strating Number Generate : 
+    <input type="text" id="no">
+    <br>
+    Show Fibonacy Series : 
+    <input type="button" value="Calculate" onclick="fibonaci()">
+    <div id="result"></div>
+
+    <script>
+        function fibonaci()
+        {
+            no = parseInt(document.getElementById("no").value);
+            var ans="";
+
+            a=0;
+            b=1;
+
+            ans+=a;
+
+            for(i=0;i<no-1;i++)
+            {
+                c=a+b;
+                ans+="<br>"+b;
+                a=b;
+                b=c;
+            }
+
+            document.getElementById("result").innerHTML=ans;
+        }
+    </script>
+</body>
+</html>
