@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    Enter Cities : 
+    <input type="text" list="city" id="name">
+    <datalist id="city">
+
+    </datalist>
+
+    <Script>
+        document.getElementById("name").value;
+        var ob = new XMLHttpRequest();
+
+        ob.onreadystatechange = function()
+        {
+            if(ob.readyState==4 && ob.status==200)
+            {
+                document.getElementById("city").innerHTML = ob.responseText;
+            }
+        };
+
+        ob.open("GET","city.php?name="+name,false);
+        ob.send();
+        
+    </Script>
+</body>
+</html>

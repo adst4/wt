@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body onload="fun()">
+    <script>
+        alert("Exams are near, have you started preparing ?");
+        function fun()
+        {
+            
+            var a =  parseInt(prompt("Enter First Number"));
+            var b =  parseInt(prompt("Enter Second Number "));
+            
+            if(isNaN(a) || isNaN(b))
+            {
+                alert("Please Enter Valid Numbers");
+                fun();
+            }
+            else
+            {
+                var c = a+b;
+                confirm("Addtion Is : "+c);
+            }
+        }
+    </script>
+</body>
+</html>

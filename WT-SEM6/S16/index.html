@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <form>
+        Select The Book : 
+        <select id="name">
+            <option value="JAVA">JAVA</option>
+            <option value="WT">WT</option>
+            <option value="OS">OS</option>
+        </select>
+        <input type="button" value="SEARCH" onclick="show()">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function show()
+        {
+            var name = document.getElementById("name").value;
+            var ob = new XMLHttpRequest();
+            ob.open("GET","book.php?name="+name,false);
+            ob.send();
+            document.getElementById("result").innerHTML = ob.responseText;
+        }
+    </script>
+
+</body>
+</html>

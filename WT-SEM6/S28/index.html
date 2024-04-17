@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <form>
+        Enter User Id :
+        <input type="text" id="usr">
+        <br>
+        Enter Password : 
+        <input type="text" id="pass">
+        <br>
+        <input type="button" value="LOGIN" onclick="check()">
+    </form>
+    <br>
+    <div id="result"></div>
+
+    <script>
+        function check()
+        {
+            var usr = document.getElementById("usr").value;
+            var pass = document.getElementById("pass").value;
+
+            var ob = new XMLHttpRequest();
+            ob.open("GET","login.php?usr="+usr+"&pass="+pass,false);
+            ob.send();
+            document.getElementById("result").innerHTML = ob.responseText;
+        }
+    </script>
+</body>
+</html>

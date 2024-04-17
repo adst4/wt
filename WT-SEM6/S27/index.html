@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <form>
+        Enter Name : 
+        <input type="text" id="name">
+        <br>
+        Enter Age : 
+        <input type="number" id="age">
+        <br>
+        Enter Nationality : 
+        <input type="text" id="nationality">
+        <br>
+        <input type="button" value="Validate" onclick="validate()">
+    </form>
+    <br>
+    <div id="result"></div>
+
+    <script>
+
+        function validate()
+        {
+            var name = document.getElementById("name").value;
+            var age = parseInt(document.getElementById("age").value);
+            var nationality = document.getElementById("nationality").value;
+
+            var ob = new XMLHttpRequest();
+            ob.open("GET", "voter.php?name=" + name + "&age=" + age + "&nationality=" + nationality, false);
+            ob.send();
+            document.getElementById("result").innerHTML = ob.responseText;
+            
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+</head>
+<body>
+    <p class="para">Hi EveryOne My Name Is HTML.</p><br>
+    <input type="button" id="b1" value="Before">
+    <input type="button" id="b2" value="After">
+    <script>
+        $(document).ready(function()
+        {
+            $("#b1").click(function()
+            {
+                $(".para").before("<p>Good Morning<p>");
+            });
+            
+            $("#b2").click(function()
+            {
+                $(".para").after("<p>Good night<p>");
+            });
+
+        });
+    </script>
+</body>
+</html>

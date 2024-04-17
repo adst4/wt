@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+    <form >
+        Enter Techer name :
+        <input type="text" id="name" onkeyup="show(this.value)">
+    </form>
+    <div id="result"></div>
+</body>
+<script>
+    function show(name)
+    {
+        var name = document.getElementById("name").value;
+        var ob = new XMLHttpRequest();
+
+        ob.onreadystatechange = function()
+        {
+            if(ob.readyState == 4 && ob.status == 200)
+            {
+                document.getElementById("result").innerHTML = ob.responseText;
+            }
+        };
+
+        ob.open("GET","teachers.php?name="+name,false);
+        ob.send();
+        
+    }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <form>
+        Enter Employee Name : 
+        <input type="text" id="name">
+        <input type="button" value="Search" onclick="search()">
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function search()
+        {
+            var name = document.getElementById("name").value;
+            
+            var ob = new XMLHttpRequest();
+            ob.open("GET","employee.php?name="+name ,false);
+            ob.send();
+            document.getElementById("result").innerHTML = ob.responseText;
+        }
+    </script>
+
+</body>
+</html>

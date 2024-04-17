@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<items>
+    <item>
+        <item-name>santur</item-name>
+        <item-rate>40</item-rate>
+        <item-quantity>2</item-quantity>
+    </item>
+    <item>
+        <item-name>lux</item-name>
+        <item-rate>35</item-rate>
+        <item-quantity>1</item-quantity>
+    </item>
+    <item>
+        <item-name>patanjli</item-name>
+        <item-rate>20</item-rate>
+        <item-quantity>3</item-quantity>
+    </item>
+    <item>
+        <item-name>detol</item-name>
+        <item-rate>45</item-rate>
+        <item-quantity>1</item-quantity>
+    </item>
+    <item>
+        <item-name>lifeboy</item-name>
+        <item-rate>40</item-rate>
+        <item-quantity>1</item-quantity>
+    </item>
+</items>

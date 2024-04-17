@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<books>
+
+    <book pages="450">
+        <title>JAVA</title>
+        <author>Sunita Shewale</author>
+        <year>2013</year>
+        <price>400</price>
+    </book>
+
+    <book pages="400">
+        <title>WT</title>
+        <author>Prajakta Deshmukh</author>
+        <year>2015</year>
+        <price>300</price>
+    </book>
+
+    <book pages="250">
+        <title>OS</title>
+        <author>Yogini Salunke</author>
+        <year>2012</year>
+        <price>350</price>
+    </book>
+
+</books>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <form>
+        Enter Username  : 
+        <input type="text" id="usr">
+        <br>
+        Enter Passward :
+        <input type="text" id="pass">
+        <br>
+        <input type="submit" value="VALIDATE" onclick="validate()">
+    </form>
+
+    <script>
+        alert("User Name Must Be Minimum Length 5 characters\n password must be given format Abc123@Abc123");
+        function validate()
+        {
+            var usr = document.getElementById("usr").value;
+            var pass = document.getElementById("pass").value;
+            var cnt = 0;
+
+            if(usr.length <= 5)
+            {
+                alert("Username Must be Minimum 5 Length Character...");
+                cnt++;
+            }
+
+            var part = [];
+            part[0] = pass;
+            part = pass.split('@');
+
+            if(!(part[0].charAt(0) === part[0].charAt(0).toUpperCase()))
+            {
+                alert("Password Invalid Format..");
+                cnt++;
+            }
+
+            if(cnt==0)
+            {
+                alert("User id Password In correct Format..");
+            }
+
+        }
+    </script>
+
+</body>
+</html>
