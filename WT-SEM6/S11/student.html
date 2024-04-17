@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <label for="name" onmouseover="big()" id="title">Enter Student Name : </label>
+    <input type="text" id="name" onblur="img()" onkeyup="change()">
+    <br>
+
+    <div id="result" onmousedown="color()"></div>
+
+    <img src="js.png" alt="js" id="img">
+
+
+    <script>
+        var name;
+
+       function change()
+        {
+            name = document.getElementById("name").value;
+            document.getElementById("result").innerHTML = name;
+        }
+
+       function color()
+        {
+
+            document.getElementById("result").style.color="red";
+        }
+
+        function big()
+        {
+            document.getElementById("title").style.fontSize="18px";
+        }
+
+        function img()
+        {
+            if(name == "")
+            {
+                document.getElementById("img").style.width="50px";
+            }
+            else
+            {
+                document.getElementById("img").style.width="100px";
+            }
+        }
+    </script>
+</body>
+</html>
